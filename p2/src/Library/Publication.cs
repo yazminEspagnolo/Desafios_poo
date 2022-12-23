@@ -33,5 +33,19 @@ namespace Ucu.Poo.Defense
         {
             this.items.Remove(item);
         }
+
+        public string AsText() 
+        {
+            StringBuilder sb = new StringBuilder(); // Creo un StringBuilder para armar el texto.
+            sb.AppendLine("Publicación");
+            sb.AppendLine("Fecha de cierre: " + this.EndDate.ToString("dd/MM/yyyy"));
+            sb.AppendLine("Items:");
+            foreach (PublicationItem item in this.items) // Recorro la lista de items.
+            {
+                sb.AppendLine(item.Material.Name + " - " + item.Quantity + " - " + item.Price); // Agrego cada item al texto.
+
+            }
+            return sb.ToString(); // Devuelvo el texto.
+        }
     }
 }

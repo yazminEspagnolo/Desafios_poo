@@ -14,5 +14,11 @@ namespace Ucu.Poo.Defense
             this.Quantity = quantity;
             this.Price = price;
         }
+        
+        public double Subtotal () // Calcula el subtotal de la publicación.
+        {
+            return this.Quantity * this.Price; // Multiplica la cantidad por el precio.
+        }
+    
     }
 }

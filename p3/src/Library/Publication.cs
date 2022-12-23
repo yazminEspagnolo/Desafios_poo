@@ -33,5 +33,18 @@ namespace Ucu.Poo.Defense
         {
             this.items.Remove(item);
         }
+
+        public double Total() // Calcula el total de la publicación.
+        {
+            
+            double total = 0;
+            foreach (PublicationItem item in this.items) //Recorre la lista de items.
+            {
+                total += item.Subtotal(); // Suma el subtotal de cada item.
+            }
+
+            return total; // Retorna el total.
+        }
     }
+       
 }
